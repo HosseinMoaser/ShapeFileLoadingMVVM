@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:ShapeFileLoadingMVVM.App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="BorderPrimary" Color="#1c1c1c" />
+
+        <Style TargetType="TextBlock" x:Key="RegularTextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
     </Application.Resources>
 </Application>
