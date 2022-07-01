@@ -13,5 +13,6 @@ namespace ShapeFileLoading.Domain.Repositories
         LocationCollection PointDArrayToLocationCollection(PointD[] points);
 
         IEnumerable<MapPolygon> ShapeFileToMapPolygon(Shapefile shapeFile);
+
     }
 }

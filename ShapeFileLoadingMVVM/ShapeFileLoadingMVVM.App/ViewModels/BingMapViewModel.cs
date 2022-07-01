@@ -52,6 +52,7 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
                 mapLayer.Children.Add(mapPolygon);
             }
             MapLayersList.Add(mapLayer);
+            _selectedMapLayerStore.SelectedLayer = mapLayer;
         }
     }
 }

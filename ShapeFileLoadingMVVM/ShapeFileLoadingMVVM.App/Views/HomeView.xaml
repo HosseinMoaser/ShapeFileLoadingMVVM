@@ -24,13 +24,13 @@
         
         <!--Visibility Controllers Grid-->
         <Grid Grid.Row="1">
-            <components:VisibilityControllersView Margin="5"/>
+            <components:VisibilityControllersView DataContext="{Binding VisibilityControllersViewModel}"  Margin="5"/>
         </Grid>
 
 
         <!--Map Grid-->
         <Grid Grid.Column="1" Grid.Row="1">
-            <components:BingMapView Margin="5" DataContext="{Binding BingMapViewModel}"/>
+            <components:BingMapView  DataContext="{Binding BingMapViewModel}" Margin="5"/>
         </Grid>
         </Grid>
 </UserControl>

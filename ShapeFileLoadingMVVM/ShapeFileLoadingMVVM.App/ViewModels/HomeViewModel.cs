@@ -18,9 +18,9 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
         public HomeViewModel(SelectedMapLayerStore selectedMapLayerStore, IEnumerable<LayersListingItemViewModel> mapLayersListingItemViewModels
             ,ObservableCollection<MapLayer> mapLayers)
         {
+            VisibilityControllersViewModel = new VisibilityControllersViewModel(selectedMapLayerStore);
             BingMapViewModel = new BingMapViewModel(selectedMapLayerStore,mapLayers);
-            LayersListingViewModel = new LayersListingViewModel(selectedMapLayerStore, mapLayersListingItemViewModels);
-            VisibilityControllersViewModel = new VisibilityControllersViewModel();
+            LayersListingViewModel = new LayersListingViewModel(selectedMapLayerStore, mapLayersListingItemViewModels);           
         }
 
     }

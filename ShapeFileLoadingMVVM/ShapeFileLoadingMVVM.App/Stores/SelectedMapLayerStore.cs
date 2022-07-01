@@ -21,15 +21,32 @@ namespace ShapeFileLoadingMVVM.App.Stores
             }
         }
 
+        private MapLayer _selectedLayer;
+        public MapLayer SelectedLayer
+        {
+            get
+            {
+                return _selectedLayer;
+            }
+            set
+            {
+                _selectedLayer = value;
+                SelectedLayerChanged?.Invoke();
+            }
+        }
+
         private string _selectedMapLayerName;
-        public string SelectedMapLayerName { get 
+        public string SelectedMapLayerName
+        {
+            get
             { return _selectedMapLayerName; }
             set
             {
                 _selectedMapLayerName = value;
-            } 
+            }
         }
 
         public event Action SelectedMapLayerChanged;
+        public event Action SelectedLayerChanged;
     }
 }

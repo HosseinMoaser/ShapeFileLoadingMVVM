@@ -20,11 +20,13 @@
                         <Setter Property="Margin" Value="5"/>
                     </Style>
                 </ListView.ItemContainerStyle>
+                
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal"></StackPanel>
                     </ItemsPanelTemplate>
                 </ListView.ItemsPanel>
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="50">

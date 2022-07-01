@@ -33,26 +33,30 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
         }
 
         private LayersListingItemViewModel _selectedLayersListingItemViewModel;
-        public LayersListingItemViewModel SelectedLayersListingItemViewModel { 
+
+        public LayersListingItemViewModel SelectedLayersListingItemViewModel 
+        { 
             get { return _selectedLayersListingItemViewModel; }
             set
             {
                 _selectedLayersListingItemViewModel = value;
 
                 if(!_selectedLayersListingItemViewModel.IsSelected)
-                {
-                    OnPropertyChanged(nameof(SelectedLayersListingItemViewModel));
-                    _selectedMapLayerStore.SelectedMapLayer = _selectedLayersListingItemViewModel?.MapLayer;
+                {                   
                     _selectedMapLayerStore.SelectedMapLayerName = _selectedLayersListingItemViewModel.ShapeFileName;
+                    OnPropertyChanged(nameof(SelectedLayersListingItemViewModel));                  
                     _selectedLayersListingItemViewModel.IsSelected = true;
+                    _selectedMapLayerStore.SelectedMapLayer = _selectedLayersListingItemViewModel?.MapLayer;
                 }
-            } }
+            } 
+        }
 
 
         public LayersListingViewModel(SelectedMapLayerStore selectedMapLayerStore, IEnumerable<LayersListingItemViewModel> mapLayersListingItemViewModels)
         {
             _selectedMapLayerStore = selectedMapLayerStore;
             MapLayersListingItemViewModels = mapLayersListingItemViewModels;
+
         }
 
         
