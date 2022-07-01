@@ -9,9 +9,9 @@ namespace ShapeFileLoadingMVVM.App.Stores
 {
     public class SelectedMapLayerStore
     {
-        private MapLayer _selectedMapLayer;
+        private IEnumerable<MapPolygon> _selectedMapLayer;
 
-        public MapLayer SelectedMapLayer
+        public IEnumerable<MapPolygon> SelectedMapLayer
         {
             get { return _selectedMapLayer; }
             set
@@ -19,6 +19,15 @@ namespace ShapeFileLoadingMVVM.App.Stores
                 _selectedMapLayer = value;
                 SelectedMapLayerChanged?.Invoke();
             }
+        }
+
+        private string _selectedMapLayerName;
+        public string SelectedMapLayerName { get 
+            { return _selectedMapLayerName; }
+            set
+            {
+                _selectedMapLayerName = value;
+            } 
         }
 
         public event Action SelectedMapLayerChanged;

@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
 
         <!--Map Grid-->
         <Grid Grid.Column="1" Grid.Row="1">
-            <components:BingMapView Margin="5"/>
+            <components:BingMapView Margin="5" DataContext="{Binding BingMapViewModel}"/>
         </Grid>
         </Grid>
 </UserControl>

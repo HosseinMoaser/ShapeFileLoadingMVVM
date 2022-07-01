@@ -1,4 +1,5 @@
 ﻿using Catfood.Shapefile;
+using Microsoft.Maps.MapControl.WPF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,24 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
 {
     public class LayersListingItemViewModel : BaseViewModel
     {
-        public Shapefile ShapeFile { get; }
-
         public string ShapeFileName { get; }
 
-        public LayersListingItemViewModel(Shapefile shapeFile, string shapeFileName)
+        public IEnumerable<MapPolygon> MapLayer { get; }
+
+        private bool _isSelected;
+        public bool IsSelected
         {
-            ShapeFile = shapeFile;
+            get { return _isSelected; }
+            set
+            {
+                _isSelected = value;
+                OnPropertyChanged(nameof(IsSelected));
+            }
+        }
+
+        public LayersListingItemViewModel(IEnumerable<MapPolygon> mapLayer, string shapeFileName)
+        {
+            MapLayer = mapLayer;
             ShapeFileName = shapeFileName;
         }
     }

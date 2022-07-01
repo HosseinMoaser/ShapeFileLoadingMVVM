@@ -13,7 +13,8 @@
             </Grid.OpacityMask>
             <Border x:Name="border" Background="White" CornerRadius="5"/>
 
-            <ListView ItemsSource="{Binding MapLayersListingItemViewModels}" BorderThickness="0"  SelectionMode="Single" VerticalAlignment="Center">
+            <ListView ItemsSource="{Binding MapLayersListingItemViewModels}" BorderThickness="0"  SelectionMode="Single" VerticalAlignment="Center"
+                      SelectedItem="{Binding SelectedLayersListingItemViewModel}">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="Margin" Value="5"/>

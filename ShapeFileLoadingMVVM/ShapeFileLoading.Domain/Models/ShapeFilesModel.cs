@@ -1,4 +1,5 @@
 ﻿using Catfood.Shapefile;
+using Microsoft.Maps.MapControl.WPF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,11 @@ namespace ShapeFileLoadingMVVM.Domain.Models
     {
         public Shapefile ShapeFile;
         public string ShapeFileName;
-        public ShapeFilesModel(Shapefile shapeFile, string shapeFileName)
+        public IEnumerable<MapPolygon> MapLayer;
+        public ShapeFilesModel(IEnumerable<MapPolygon> mapLayer, string shapeFileName)
         {
-            ShapeFile = shapeFile;
             ShapeFileName = shapeFileName;
+            MapLayer = mapLayer;
         }
     }
 }

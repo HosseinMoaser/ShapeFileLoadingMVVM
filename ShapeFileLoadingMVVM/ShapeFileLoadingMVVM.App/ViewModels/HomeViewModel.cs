@@ -1,4 +1,5 @@
-﻿using ShapeFileLoadingMVVM.App.Stores;
+﻿using Microsoft.Maps.MapControl.WPF;
+using ShapeFileLoadingMVVM.App.Stores;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,9 +15,10 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
         public LayersListingViewModel LayersListingViewModel { get; }
         public VisibilityControllersViewModel VisibilityControllersViewModel { get; }
 
-        public HomeViewModel(SelectedMapLayerStore selectedMapLayerStore, IEnumerable<LayersListingItemViewModel> mapLayersListingItemViewModels)
+        public HomeViewModel(SelectedMapLayerStore selectedMapLayerStore, IEnumerable<LayersListingItemViewModel> mapLayersListingItemViewModels
+            ,ObservableCollection<MapLayer> mapLayers)
         {
-            BingMapViewModel = new BingMapViewModel(selectedMapLayerStore);
+            BingMapViewModel = new BingMapViewModel(selectedMapLayerStore,mapLayers);
             LayersListingViewModel = new LayersListingViewModel(selectedMapLayerStore, mapLayersListingItemViewModels);
             VisibilityControllersViewModel = new VisibilityControllersViewModel();
         }

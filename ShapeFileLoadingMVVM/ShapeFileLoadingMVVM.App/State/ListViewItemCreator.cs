@@ -14,7 +14,7 @@ namespace ShapeFileLoadingMVVM.App.State
         public IEnumerable<LayersListingItemViewModel> CreateLayersListViewItems(IEnumerable<ShapeFilesModel> shapeFiles)
         {
             foreach(ShapeFilesModel shapefile in shapeFiles)
-                yield return new LayersListingItemViewModel(shapefile.ShapeFile, shapefile.ShapeFileName);
+                yield return new LayersListingItemViewModel(shapefile.MapLayer, shapefile.ShapeFileName);
         }
     }
 }

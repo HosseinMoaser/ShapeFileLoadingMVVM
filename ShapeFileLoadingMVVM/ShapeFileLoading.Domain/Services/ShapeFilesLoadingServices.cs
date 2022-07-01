@@ -13,10 +13,18 @@ namespace ShapeFileLoading.Domain.Services
 {
     public class ShapeFilesLoadingServices : IShapeFilesLoadingServices
     {
+        private IShapeFilesConverterServices _shapeFilesConverterServices;
+
+        public ShapeFilesLoadingServices(ShapeFilesConverterServices shapeFilesConverterServices)
+        {
+            _shapeFilesConverterServices = shapeFilesConverterServices;
+        }
+
         public IEnumerable<ShapeFilesModel> LoadShapeFiles()
         {
             foreach (string file in Directory.EnumerateFiles(Directory.GetCurrentDirectory() + "\\ShapeFiles\\", "*.shp"))         
-                yield return new ShapeFilesModel(new Shapefile(file), System.IO.Path.GetFileName(file).Replace(".shp", ""));            
+                yield return new ShapeFilesModel(_shapeFilesConverterServices.ShapeFileToMapPolygon(new Shapefile(file)),
+                    System.IO.Path.GetFileName(file).Replace(".shp", ""));            
         }
     }
 }
