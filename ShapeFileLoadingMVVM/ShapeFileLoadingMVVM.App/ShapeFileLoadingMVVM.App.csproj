@@ -70,6 +70,9 @@
     <Compile Include="Components\VisibilityControllersView.xaml.cs">
       <DependentUpon>VisibilityControllersView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="State\IListViewItemCreator.cs" />
+    <Compile Include="State\ListViewItemCreator.cs" />
+    <Compile Include="Stores\SelectedMapLayerStore.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BingMapViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -157,9 +160,7 @@
       <Name>ShapeFileLoading.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Stores\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\Layer.png" />
   </ItemGroup>

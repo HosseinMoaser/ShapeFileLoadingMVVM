@@ -19,7 +19,7 @@
 
         <!--List Of Layers-->
         <Grid Grid.ColumnSpan="2">
-            <components:LayersListingView Margin="5"/>
+            <components:LayersListingView DataContext="{Binding LayersListingViewModel}" Margin="5"/>
         </Grid>
         
         <!--Visibility Controllers Grid-->

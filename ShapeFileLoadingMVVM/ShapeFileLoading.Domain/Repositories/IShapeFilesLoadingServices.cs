@@ -1,4 +1,5 @@
 ﻿using Catfood.Shapefile;
+using ShapeFileLoadingMVVM.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace ShapeFileLoading.Domain.Repositories
 {
     public interface IShapeFilesLoadingServices
     {
-        IEnumerable<Shapefile> LoadShapeFiles();
+        IEnumerable<ShapeFilesModel> LoadShapeFiles();
     }
 }

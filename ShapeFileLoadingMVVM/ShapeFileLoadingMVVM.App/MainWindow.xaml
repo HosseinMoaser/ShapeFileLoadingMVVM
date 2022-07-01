@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShapeFileLoadingMVVM.App"
         xmlns:views="clr-namespace:ShapeFileLoadingMVVM.App.Views"
+        xmlns:viewmodels="clr-namespace:ShapeFileLoadingMVVM.App.ViewModels"
         mc:Ignorable="d"
         Title="Shape Files Loading MVVM" Height="600" Width="1000">
+    
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}" >
+            <views:HomeView/>
+        </DataTemplate>
+    </Window.Resources>
+    
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <Grid>
             <views:HomeView DataContext="{Binding HomeViewModel}"/>

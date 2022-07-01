@@ -8,6 +8,11 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        public HomeViewModel HomeViewModel { get; }
 
+        public MainViewModel(HomeViewModel homeViewModel)
+        {
+            HomeViewModel = homeViewModel;
+        }
     }
 }
