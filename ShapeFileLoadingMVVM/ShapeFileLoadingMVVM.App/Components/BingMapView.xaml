@@ -11,7 +11,13 @@
         <Grid>
             <m:Map x:Name="myMap" CredentialsProvider="nVlAIaXm6USJiS3wYreG~J7fvckOrdNk8wOW3NB81aQ~At_v5srbwjlqqZyq9m25qUrvh1z8QRAPjLj7Yv_RTM88AWbwENyKVFUYxdAKLxsM" 
                ZoomLevel="1">
-                <m:MapItemsControl ItemsSource="{Binding MapLayersList}"/>
+                <m:MapItemsControl ItemsSource="{Binding MapLayersList}">
+                    <m:MapItemsControl.ItemTemplate>
+                        <DataTemplate>
+
+                        </DataTemplate>
+                    </m:MapItemsControl.ItemTemplate>
+                </m:MapItemsControl>
             </m:Map>
         </Grid>
     </Border>

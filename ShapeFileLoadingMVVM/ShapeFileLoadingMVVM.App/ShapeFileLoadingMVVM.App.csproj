@@ -70,6 +70,14 @@
     <Compile Include="Components\VisibilityControllersView.xaml.cs">
       <DependentUpon>VisibilityControllersView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BingMapViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LayersListingItemViewModel.cs" />
+    <Compile Include="ViewModels\LayersListingViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\VisibilityControllersListingItemViewModel.cs" />
+    <Compile Include="ViewModels\VisibilityControllersViewModel.cs" />
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
@@ -125,6 +133,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="ShapeFiles\gadm40_IRN_0.cpg" />
+    <None Include="ShapeFiles\gadm40_IRN_0.dbf" />
+    <None Include="ShapeFiles\gadm40_IRN_0.prj" />
+    <None Include="ShapeFiles\gadm40_IRN_0.shp" />
+    <None Include="ShapeFiles\gadm40_IRN_0.shx" />
+    <None Include="ShapeFiles\gadm40_SWE_0.cpg" />
+    <None Include="ShapeFiles\gadm40_SWE_0.dbf" />
+    <None Include="ShapeFiles\gadm40_SWE_0.prj" />
+    <None Include="ShapeFiles\gadm40_SWE_0.shp" />
+    <None Include="ShapeFiles\gadm40_SWE_0.shx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -140,9 +158,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ShapeFiles\" />
     <Folder Include="Stores\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Layer.png" />
