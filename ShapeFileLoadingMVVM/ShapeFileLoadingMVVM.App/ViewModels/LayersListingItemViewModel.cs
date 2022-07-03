@@ -12,8 +12,6 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
     {
         public string ShapeFileName { get; }
 
-        public IEnumerable<MapPolygon> MapLayer { get; }
-
         private bool _isSelected;
         public bool IsSelected
         {
@@ -24,6 +22,8 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
                 OnPropertyChanged(nameof(IsSelected));
             }
         }
+
+        public IEnumerable<MapPolygon> MapLayer { get; }
 
         public LayersListingItemViewModel(IEnumerable<MapPolygon> mapLayer, string shapeFileName)
         {

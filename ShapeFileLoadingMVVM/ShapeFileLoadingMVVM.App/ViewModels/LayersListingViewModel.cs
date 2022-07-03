@@ -21,17 +21,6 @@ namespace ShapeFileLoadingMVVM.App.ViewModels
             }
         }
 
-        private bool _isSelected;
-        public bool IsSelected
-        {
-            get { return _isSelected; }
-            set
-            {
-                _isSelected = value;
-                OnPropertyChanged(nameof(IsSelected));
-            }
-        }
-
         private LayersListingItemViewModel _selectedLayersListingItemViewModel;
 
         public LayersListingItemViewModel SelectedLayersListingItemViewModel 
